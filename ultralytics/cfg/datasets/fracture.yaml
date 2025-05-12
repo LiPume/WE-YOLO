@@ -1,0 +1,7 @@
+train: /root/autodl-tmp/All/images/train
+val: /root/autodl-tmp/All/images/test
+test: /root/autodl-tmp/All/images/test
+
+names:
+  0: fracture
+  1: rubbish
