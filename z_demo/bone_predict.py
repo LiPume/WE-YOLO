@@ -18,10 +18,10 @@ def calculate_iou(box1, box2):
 
 # 参数
 iou_threshold = 0.5
-model_path = r'E:\AIpractice\detect\yolov11\ultralytics-main\runs\again\G-yolov11n.pt'
-val_image_dir = r"E:\AIpractice\detect\yolov11\ultralytics-main\dataset\s\images\test2"
-label_dir = r"E:\AIpractice\detect\yolov11\ultralytics-main\dataset\s\labels\test2"
-save_dir = r"E:\AIpractice\detect\yolov11\ultralytics-main\results\aaaaas"
+model_path = r'../weights/yolov11n-face.pt'
+val_image_dir = r"../dataset/split_g_1117/images/val"
+label_dir = r"../dataset/split_g_1117/labels/val"
+save_dir = r"runs/train"
 high_accuracy_dir = os.path.join(save_dir, "all")  # 新建文件夹用于保存高准确率图像
 results_file = os.path.join(save_dir, "evaluation_metrics.txt")
 
@@ -108,7 +108,7 @@ for image_path in image_paths:
             x1, y1, x2, y2 = map(int, box)
             confidence = pred_scores[idx]
             cv2.rectangle(img, (x1, y1), (x2, y2), (0, 0, 255), 2)  # 绘制预测框，红色，线宽2
-            label = f'fracture {confidence:.2f}'  # 标注置信度
+            label = f'face {confidence:.2f}'  # 标注置信度
             # 检查是否需要调整文本位置
             if y1 - 20 > 0:  # 如果框上方有足够的空间
                 cv2.putText(img, label, (x1, y1 - 10), cv2.FONT_HERSHEY_SIMPLEX, 0.8, (0, 0, 255), 2)  # 在预测框上方绘制置信度

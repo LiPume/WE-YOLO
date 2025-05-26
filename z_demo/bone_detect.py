@@ -4,10 +4,10 @@ warnings.filterwarnings('ignore')
 from ultralytics import YOLO
 
 if __name__ == '__main__':
-    model = YOLO(r'..\ultralytics\cfg\models\11\yolo11WTEMA.yaml')
+    model = YOLO('yolo11mWTConv.yaml')
     # 开始训练
     model.train(
-        data=r'..\ultralytics\cfg\datasets\boons.yaml',
+        data=r'/root/autodl-tmp/WE-YOLO/ultralytics/cfg/datasets/boons.yaml',
         cache=False,
         imgsz=640,
         epochs=100,
