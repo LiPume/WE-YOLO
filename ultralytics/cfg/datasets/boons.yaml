@@ -1,7 +1,0 @@
-train: E:\AIpractice\detect\yolov11\WE-YOLO\dataset\split_g_1117\images\train
-val: E:\AIpractice\detect\yolov11\WE-YOLO\dataset\split_g_1117\images\val
-test: E:\AIpractice\detect\yolov11\WE-YOLO\dataset\split_g_1117\images\val
-
-names:
-  0: fracture
-  1: rubbish

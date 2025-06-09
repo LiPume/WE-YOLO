@@ -1,6 +1,0 @@
-train: E:\AIpractice\detect\yolov11\ultralytics-main\dataset\split_s_1114\images\train
-val: E:\AIpractice\detect\yolov11\ultralytics-main\dataset\split_s_1114\images\val
-
-names:
-  0: fracture
-  1: rubbish

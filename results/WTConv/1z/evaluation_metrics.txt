@@ -1,0 +1,6 @@
+Total GT Boxes: 2735
+Total Predicted Boxes: 2199
+Correct Predicted Boxes: 1809
+Precision: 0.82
+Recall: 0.66
+F1 Score: 0.73
