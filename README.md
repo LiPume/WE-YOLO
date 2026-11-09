@@ -1,3 +1,22 @@
+# WE-YOLO
+
+This repository contains a YOLO11 model that uses wavelet convolution (WTConv) and efficient multi-scale attention (EMA). Install the fork from the repository root so Python uses the custom model layers.
+
+~~~bash
+python -m pip install -e .
+python -c "from ultralytics import YOLO; YOLO('yolo11nWTEMA.yaml')"
+~~~
+
+The second command builds the nano model from its architecture YAML. To train it with your own YOLO-format data, supply a dataset YAML with your train and validation paths and class names.
+
+~~~bash
+yolo detect train model=yolo11nWTEMA.yaml data=path/to/dataset.yaml
+~~~
+
+The research training scripts use paths and checkpoints from the original experiments. The command above starts a fresh model.
+
+## Ultralytics documentation
+
 <div align="center">
   <p>
     <a href="https://www.ultralytics.com/events/yolovision" target="_blank">
